@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Test Yape</string>
+    <string name="app_bar_title">Prueba de Ingreso</string>
+    <string name="search_user">Buscar receta o autores</string>
+    <string name="view_posts">VER PUBLICACIONES</string>
+    <string name="empty_list_alert">List is empty</string>
+    <string name="empty_list_error">There was an error loading the list</string>
+</resources>
