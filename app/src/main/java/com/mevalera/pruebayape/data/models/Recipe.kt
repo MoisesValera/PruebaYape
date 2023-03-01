@@ -28,17 +28,17 @@ data class Recipe(
     val vegetarian: Boolean? = false,
     @ColumnInfo(name = "glutenFree")
     val glutenFree: Boolean? = false
-) : Parcelable {
-    fun doesMatchSearchQuery(query: String): Boolean {
-        val matchingCombinations = listOf(
-            "$title$sourceName",
-            "$title $sourceName",
-            "${title.first()} ${sourceName.first()}",
-        )
+) : Parcelable
 
-        return matchingCombinations.any {
-            it.contains(query, ignoreCase = true)
-        }
+fun Recipe.doesMatchSearchQuery(query: String): Boolean {
+    val matchingCombinations = listOf(
+        "$title$sourceName",
+        "$title $sourceName",
+        "${title.first()} ${sourceName.first()}",
+    )
+
+    return matchingCombinations.any {
+        it.contains(query, ignoreCase = true)
     }
 }
 

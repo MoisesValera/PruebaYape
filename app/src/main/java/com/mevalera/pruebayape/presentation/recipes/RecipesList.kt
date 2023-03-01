@@ -27,6 +27,7 @@ import androidx.navigation.NavController
 import coil.compose.SubcomposeAsyncImage
 import com.mevalera.pruebayape.R
 import com.mevalera.pruebayape.data.models.Recipe
+import com.mevalera.pruebayape.data.models.doesMatchSearchQuery
 import com.mevalera.pruebayape.navigation.TestNavigation
 import com.mevalera.pruebayape.presentation.LoadingSpinner
 import com.mevalera.pruebayape.theme.Green200
