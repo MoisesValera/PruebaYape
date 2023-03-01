@@ -1,6 +1,6 @@
 # PruebaYape
 
-### Built With 🛠
+### Construido con 🛠
 
 - [Kotlin](https://kotlinlang.org/) 
 - [Clean Architecture](https://developer.android.com/topic/architecture)
