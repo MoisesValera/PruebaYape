@@ -28,6 +28,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.mevalera.pruebayape.navigation.TestNavigation
 import com.mevalera.pruebayape.presentation.recipes.RecipeDetail
+import com.mevalera.pruebayape.presentation.recipes.RecipeOnMap
 import com.mevalera.pruebayape.presentation.recipes.RecipesList
 import com.mevalera.pruebayape.presentation.recipes.RecipesViewModel
 import com.mevalera.pruebayape.ui.theme.TestTheme
@@ -108,14 +109,29 @@ class MainActivity : ComponentActivity() {
                             }
                             composable(
                                 TestNavigation.RecipeDetail.route,
-                                arguments = listOf(navArgument("recipeId") {
+                                arguments = listOf(navArgument(RECIPE_ID) {
                                     type = NavType.IntType
                                 })
                             ) { backStackEntry ->
                                 backStackEntry.arguments?.let {
                                     RecipeDetail(
                                         recipesViewModel = recipesViewModel,
-                                        recipeId = it.getInt("recipeId")
+                                        recipeId = it.getInt(RECIPE_ID),
+                                        navController = navController
+                                    )
+                                }
+                            }
+                            composable(
+                                TestNavigation.RecipeOnMap.route,
+                                arguments = listOf(navArgument(RECIPE_ID) {
+                                    type = NavType.IntType
+                                })
+                            ) {
+                                    backStackEntry ->
+                                backStackEntry.arguments?.let {
+                                    RecipeOnMap(
+                                        recipesViewModel = recipesViewModel,
+                                        recipeId = it.getInt(RECIPE_ID)
                                     )
                                 }
                             }
@@ -124,5 +140,9 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    companion object{
+        const val RECIPE_ID = "recipeId"
     }
 }

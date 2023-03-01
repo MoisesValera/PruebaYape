@@ -30,9 +30,8 @@ import com.mevalera.pruebayape.data.models.Recipe
 import com.mevalera.pruebayape.data.models.doesMatchSearchQuery
 import com.mevalera.pruebayape.navigation.TestNavigation
 import com.mevalera.pruebayape.presentation.LoadingSpinner
-import com.mevalera.pruebayape.theme.Green200
+import com.mevalera.pruebayape.theme.Magenta200
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun RecipesList(recipesViewModel: RecipesViewModel, navController: NavController) {
     val recipesList by recipesViewModel.recipes.collectAsState()
@@ -97,7 +96,6 @@ fun RecipesListItem(recipe: Recipe, navController: NavController) {
             .clickable {
                 navController.navigate(TestNavigation.RecipeDetail.createRoute(recipe.id))
             }) {
-            // Render the recipe title, price and source
             Column {
                 SubcomposeAsyncImage(
                     model = recipe.image,
@@ -117,14 +115,14 @@ fun RecipesListItem(recipe: Recipe, navController: NavController) {
 
             ) {
                 Column {
-                    Text(text = recipe.title, fontWeight = FontWeight.Bold, color = Green200)
+                    Text(text = recipe.title, fontWeight = FontWeight.Bold, color = Magenta200)
                     Spacer(modifier = Modifier.size(10.dp))
                     Row {
-                        Icon(Icons.Filled.ShoppingCart, "", tint = Green200)
+                        Icon(Icons.Filled.ShoppingCart, "", tint = Magenta200)
                         Text(text = "$" + recipe.pricePerServing.toString())
                     }
                     Row {
-                        Icon(Icons.Filled.Info, "", tint = Green200)
+                        Icon(Icons.Filled.Info, "", tint = Magenta200)
                         Text(text = recipe.sourceName)
                     }
                 }
@@ -140,7 +138,7 @@ fun SearchRecipesTextField(query: String, onSearchValueChanged: (String) -> Unit
         modifier = Modifier
             .fillMaxWidth(),
         textAlign = TextAlign.Start,
-        color = Green200
+        color = Magenta200
     )
     Spacer(modifier = Modifier.height(2.dp))
     BasicTextField(
@@ -154,7 +152,7 @@ fun SearchRecipesTextField(query: String, onSearchValueChanged: (String) -> Unit
                 if (query.isEmpty()) {
                     Text(
                         text = "",
-                        color = Green200,
+                        color = Magenta200,
                         fontSize = 14.sp
                     )
                 }
@@ -166,7 +164,7 @@ fun SearchRecipesTextField(query: String, onSearchValueChanged: (String) -> Unit
     Divider(
         modifier = Modifier
             .height(2.dp)
-            .background(color = Green200)
+            .background(color = Magenta200)
             .fillMaxWidth()
     )
 }

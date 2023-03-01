@@ -5,4 +5,6 @@
     <string name="view_posts">VER PUBLICACIONES</string>
     <string name="empty_list_alert">List is empty</string>
     <string name="empty_list_error">There was an error loading the list</string>
+    <string name="marker_details">Marcador en Singapur</string>
+    <string name="view_in_map">Ver en el mapa</string>
 </resources>

@@ -81,6 +81,10 @@ dependencies {
     // Coil
     implementation "io.coil-kt:coil-compose:2.2.2"
 
+    //GoogleMaps
+    implementation "com.google.maps.android:maps-compose:2.0.0"
+    implementation "com.google.android.gms:play-services-maps:18.0.2"
+
     // Test dependencies
     testImplementation 'junit:junit:4.13.2'
     testImplementation "androidx.arch.core:core-testing:2.1.0"
