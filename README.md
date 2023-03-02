@@ -19,7 +19,7 @@ https://user-images.githubusercontent.com/5515818/222192547-0c6ee7ad-7434-48d1-8
 
 ### Grafico de arquitectura utilizada 🪜
 
-![mad-arch-overview-data](https://user-images.githubusercontent.com/5515818/222504687-3131a02d-a55a-46d3-9810-07c2f4adbcad.png)
+![architecture](https://user-images.githubusercontent.com/5515818/222506562-3255c4c4-6cce-43fb-9993-d10183924865.png)
 
 ### Librerias utilizadas 🛠
 
